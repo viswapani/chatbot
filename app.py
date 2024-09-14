@@ -1,24 +1,3 @@
-!pip install openai==0.28
-import openai
-import os
-#Set the API key here
-os.environ["OPENAI_API_KEY"] = "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"
-openai.api_key = os.getenv("OPENAI_API_KEY")
-def chatbot(prompt):
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            #{"role": "system", "content": "You are an expert medical professional and Somebody who can help people with general medical queries and guide them to a correct medical professional  "},
-            {"role": "system", "content": "You are a microsoft dot net core expert and you will help developers to build web application and any dotnet application"},
-            {"role": "user", "content": prompt},
-        ]
-    )
-    return response['choices'][0]['message']['content']
-# Example chat interaction
-user_input = input("")
-bot_response = chatbot(user_input)
-print(f"Chatbot: {bot_response}")
-
 import streamlit as st
 import openai
 
