@@ -14,7 +14,7 @@ def chatbot(prompt):
 
 # Streamlit app starts here
 def main():
-    st.title("GPT Chatbot")
+    st.title("Viswapani's GPT Chatbot")
     st.write("Enter your question below:")
 
     # Input text box for user
